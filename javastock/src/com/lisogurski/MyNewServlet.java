@@ -18,7 +18,7 @@ public class MyNewServlet extends HttpServlet {
 		int radius=50;
 		double pi=Math.PI;
 		double area=radius*radius*pi;
-		String line1 = new String("Calculation 1: Area of circle with radius"+radius+"is:" +area+ "squere cm.");
+		String line1 = new String("Calculation 1: Area of circle with radius "+radius+" is : " +area+ " squere cm.");
         
 		
 		//part 2
@@ -26,7 +26,7 @@ public class MyNewServlet extends HttpServlet {
 		double hypotenuse=50;
 		double radians=Math.toRadians(angleB);
 		double opposite=radians*hypotenuse;
-		String line2 = new String("Calculation 2: Length of opposite where angle B is" +angleB+ "and hypotenuse is" +hypotenuse+ ", is: " +opposite+ "cm.");
+		String line2 = new String("Calculation 2: Length of opposite where angle B is " +angleB+ " and hypotenuse is : " +hypotenuse+ ", is : " +opposite+ " cm.");
 
 		
 		

@@ -4,14 +4,38 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	
 	<servlet>
-		<servlet-name>Javastock</servlet-name>
-		<servlet-class>com.lisogurski.JavastockServlet</servlet-class>
+		<servlet-name>JavaStockServlet</servlet-name>
+		<servlet-class>com.lisogurski.JavaStockServlet</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>JavaStockServlet</servlet-name>
+		<url-pattern>/javastockservlet</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>MyNewServlet</servlet-name>
+		<servlet-class>com.lisogurski.MyNewServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Javastock</servlet-name>
-		<url-pattern>/javastock</url-pattern>
+		<servlet-name>MyNewServlet</servlet-name>
+		<url-pattern>/MyNewServlet</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockDetailsServlet</servlet-name>
+		<servlet-class>com.lisogurski.StockDetailsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockDetailsServlet</servlet-name>
+		<url-pattern>/stockdetails</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
