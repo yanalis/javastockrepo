@@ -8,6 +8,13 @@ public class Stock {
 	private float ask;
 	private float bid;
 	private Date date;
+	private int recommendation;
+	private int stockQuantity;
+	
+	final int BUY=0;
+	final int SELL=1;
+	final int REMOVE=2;
+	final int HOLD=3;
 
 	public Stock(String symbol, float ask, float bid, Date date){
 		this.symbol=symbol;
@@ -49,6 +56,13 @@ public class Stock {
 		this.date = date;
 	}
    
+	public int getRecommendation() {
+		return this.recommendation;
+	}
+	public int getStockQuantity() {
+		return stockQuantity;
+	}
+
 	@SuppressWarnings("deprecation")
 	public String getHtmlDescription(){
 		
