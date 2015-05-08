@@ -11,10 +11,10 @@ public class Stock {
 	private int recommendation;
 	private int stockQuantity;
 	
-	final int BUY=0;
-	final int SELL=1;
-	final int REMOVE=2;
-	final int HOLD=3;
+	static final int BUY=0;
+	static final int SELL=1;
+	static final int REMOVE=2;
+	static final int HOLD=3;
 
 	public Stock(String symbol, float ask, float bid, Date date){
 		this.symbol=symbol;

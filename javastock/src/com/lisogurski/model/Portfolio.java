@@ -1,11 +1,11 @@
 package com.lisogurski.model;
 
 
-import com.myorg.javacourse.amitcohenapp321.Stock;
+import com.lisogurski.Stock;
 
 public class Portfolio {
 	private String title;
-	final int MAX_PORTFOLIO_SIZE = 5;
+	static final int MAX_PORTFOLIO_SIZE = 5;
 	private Stock[] stocks = new Stock[MAX_PORTFOLIO_SIZE];
 	int portfolioSize;
 	
