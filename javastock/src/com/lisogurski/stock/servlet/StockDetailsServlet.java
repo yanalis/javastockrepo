@@ -1,17 +1,13 @@
-package com.lisogurski;
+package com.lisogurski.stock.servlet;
 
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.lisogurski.model.CopyStock;
-
-import java.lang.String;
-import java.util.Calendar;
-import java.util.Date;
 
 @SuppressWarnings("serial")
 public class StockDetailsServlet extends HttpServlet{

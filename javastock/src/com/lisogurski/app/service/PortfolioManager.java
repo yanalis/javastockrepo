@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import com.lisogurski.model.Portfolio;
-import com.lisogurski.model.CopyStock;
+import com.lisogurski.stock.servlet.CopyStock;
 
 public class PortfolioManager 
 {	

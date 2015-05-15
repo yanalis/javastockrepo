@@ -1,4 +1,4 @@
-package com.lisogurski.model;
+package com.lisogurski.stock.servlet;
 
 import java.util.Date;
 
@@ -10,10 +10,10 @@ public class CopyStock
     private int recommendation;
     private int stockQuantity;
     
-    final int BUY = 0; // appear only in one place in order to save memory
-    final int SELL = 1; // appear only in one place in order to save memory
-    final int REMOVE = 2; // appear only in one place in order to save memory
-    final int HOLD = 3; // appear only in one place in order to save memory
+    final int BUY = 0; 
+    final int SELL = 1; 
+    final int REMOVE = 2; 
+    final int HOLD = 3; 
 
 	public CopyStock(String symbol, float ask, float bid, Date date) // New stock constructor
 	{
@@ -23,39 +23,39 @@ public class CopyStock
 	    this.date = date;
 	}
 	
-	public CopyStock(CopyStock stockToCopy) // Duplicate existing stock
+	public CopyStock(CopyStock stockToCopy) 
 	{
-	    this.symbol = stockToCopy.getSymbol();
-	    this.ask = stockToCopy.getAsk();
-	    this.bid = stockToCopy.getBid();
-	    this.date = stockToCopy.getDate();
-	    this.recommendation = stockToCopy.getRecommendation();
-	    this.stockQuantity = stockToCopy.getStockQuantity();
+	    this.symbol=stockToCopy.getSymbol();
+	    this.ask=stockToCopy.getAsk();
+	    this.bid=stockToCopy.getBid();
+	    this.date=stockToCopy.getDate();
+	    this.recommendation=stockToCopy.getRecommendation();
+	    this.stockQuantity=stockToCopy.getStockQuantity();
 	}
 
 	public String getSymbol() {
 		return symbol;
 	}
 	public void setSymbol(String symbol) {
-		this.symbol = symbol;
+		this.symbol=symbol;
 	}
 	public float getAsk() {
 		return ask;
 	}
 	public void setAsk(float ask) {
-		this.ask = ask;
+		this.ask=ask;
 	}
 	public float getBid() {
 		return bid;
 	}	
 	public void setBid(float bid) {
-		this.bid = bid;
+		this.bid=bid;
 	}
 	public Date getDate() {
 		return this.date;
 	}
 	public void setDate(Date date) {
-		this.date = date;
+		this.date=date;
 	}
 	public int getRecommendation() {
 		return this.recommendation;

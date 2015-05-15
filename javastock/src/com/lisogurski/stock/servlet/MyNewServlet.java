@@ -1,4 +1,4 @@
-package com.lisogurski;
+package com.lisogurski.stock.servlet;
 
 import java.io.IOException;
 

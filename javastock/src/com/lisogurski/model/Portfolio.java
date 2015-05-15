@@ -2,6 +2,8 @@ package com.lisogurski.model;
 
 import java.util.Date;
 
+import com.lisogurski.stock.servlet.CopyStock;
+
 public class Portfolio 
 {
 	private String title;
@@ -21,10 +23,10 @@ public class Portfolio
 		this.title = portfolioToCopy.getTitle();
 		for (int i=0; i < portfolioToCopy.getPortfolioSize(); i++)
 		{
-			String symbol = portfolioToCopy.stocks[i].getSymbol();
-			float ask = portfolioToCopy.stocks[i].getAsk();
-			float bid = portfolioToCopy.stocks[i].getBid();
-			Date date = portfolioToCopy.stocks[i].getDate();
+			String symbol=portfolioToCopy.stocks[i].getSymbol();
+			float ask=portfolioToCopy.stocks[i].getAsk();
+			float bid=portfolioToCopy.stocks[i].getBid();
+			Date date=portfolioToCopy.stocks[i].getDate();
 			CopyStock stock = new CopyStock(symbol,ask,bid,date);
 			this.stocks[i] = stock;
 		}
@@ -49,10 +51,10 @@ public class Portfolio
 		{
 			for (int i=0; i < portfolioSize; i++) // Stock to erase is not the last stock
 			{
-				if (this.stocks[i].getSymbol().equals(symbolToErase))
+     			if (this.stocks[i].getSymbol().equals(symbolToErase))
 				{
 					this.stocks[i] = this.stocks[portfolioSize-1];
-					this.stocks[portfolioSize-1] = null;
+					this.stocks[portfolioSize-1]=null;
 					portfolioSize--;
 				}
 			}
@@ -90,7 +92,5 @@ public class Portfolio
 	}
 	
 }
-
-
 
 
