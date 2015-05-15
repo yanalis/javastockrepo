@@ -1,4 +1,4 @@
-package com.lisogurski.app.service;
+package com.lisogurski.model;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -6,7 +6,7 @@ import java.util.Date;
 import com.lisogurski.model.Portfolio;
 import com.lisogurski.model.CopyStock;
 
-public class PortfolioManager 
+public class CopyPortfolioManager 
 {	
 	public Portfolio getPortfolio()
 	{
@@ -37,11 +37,6 @@ public class PortfolioManager
 	}
 
 }
-
-
-
-
-
 
 
 
