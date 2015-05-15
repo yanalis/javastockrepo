@@ -15,7 +15,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet>	
 	<servlet-mapping>
 		<servlet-name>JavaStockServlet</servlet-name>
-		<url-pattern>/JavaStockServlet</url-pattern>
+		<url-pattern>/javastockservlet</url-pattern>
 	</servlet-mapping>
 		
 	<servlet>
@@ -38,7 +38,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>PortfolioServlet</servlet-name>
-		<servlet-class>com.lisogurski.PortfolioServlet</servlet-class>
+		<servlet-class>com.lisogurski.stock.servlet.PortfolioServlet</servlet-class>
 	</servlet>	
 	<servlet-mapping>
 		<servlet-name>PortfolioServlet</servlet-name>
@@ -48,13 +48,12 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
 	<servlet>
 		<servlet-name>copyServlet</servlet-name>
-		<servlet-class>com.lisogurski.model.copyservlet</servlet-class>
+		<servlet-class>com.lisogurski.model.CopyServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CopyServlet</servlet-name>
+		<servlet-name>copyServlet</servlet-name>
 		<url-pattern>copyServlet</url-pattern>
 	</servlet-mapping>
-	
 	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
