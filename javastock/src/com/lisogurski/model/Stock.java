@@ -1,4 +1,3 @@
-
 package com.lisogurski.model;
 import java.util.Date;
 
@@ -7,20 +6,17 @@ public class Stock
     private String symbol;
     private float ask, bid;
     private Date date;
-    private int recommendation;
+    //private ALGO_RECOMMENDATION recommendation;
     private int stockQuantity;
-    
-    final int BUY = 0; // appear only in one place in order to save memory
-    final int SELL = 1; // appear only in one place in order to save memory
-    final int REMOVE = 2; // appear only in one place in order to save memory
-    final int HOLD = 3; // appear only in one place in order to save memory
+  
 
-	public Stock(String symbol, float ask, float bid, Date date) // New stock constructor
+	public Stock(String symbol, float ask, float bid, Date date, int quantity) // New stock constructor
 	{
 	    this.symbol = symbol;
 	    this.ask = ask;
 	    this.bid = bid;
 	    this.date = date;
+	    this.stockQuantity = quantity;
 	}
 	
 	public Stock(Stock stockToCopy) // Duplicate existing stock
@@ -29,9 +25,11 @@ public class Stock
 	    this.ask = stockToCopy.getAsk();
 	    this.bid = stockToCopy.getBid();
 	    this.date = stockToCopy.getDate();
-	    this.recommendation = stockToCopy.getRecommendation();
+	    //this.recommendation = stockToCopy.getRecommendation();
 	    this.stockQuantity = stockToCopy.getStockQuantity();
 	}
+
+	// getters & setters //
 
 	public String getSymbol() {
 		return symbol;
@@ -40,7 +38,7 @@ public class Stock
 		this.symbol = symbol;
 	}
 	public float getAsk() {
-		return ask;
+		return this.ask;
 	}
 	public void setAsk(float ask) {
 		this.ask = ask;
@@ -57,43 +55,30 @@ public class Stock
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public int getRecommendation() {
+	/*public int getRecommendation() {
 		return this.recommendation;
+	}*/
+	public int getStockQuantity()
+	{
+		return this.stockQuantity;
 	}
-	public int getStockQuantity() {
-		return stockQuantity;
+	
+	public void setStockQuantity(int quantityToSet) 
+	{ 
+		this.stockQuantity = quantityToSet;
 	}
-		
+	
 	@SuppressWarnings("deprecation")
 	public String getHtmlDescription() // output stocks details
 	{
 	    return "<b>Symbol</b>: " + getSymbol() +
 	    	   ", <b>Ask</b>: " + getAsk() +
 	    	   ", <b>Bid</b>: " + getBid() +
-		       ", <b>Date</b>: " + getDate().getMonth() +  "/" + getDate().getDate() + "/"  +(1900 + getDate().getYear())+"<br>";
+		       ", <b>Date</b>: " + getDate().getMonth() +  "/" + getDate().getDate() + "/"  +(1900 + getDate().getYear())+
+		       ", <b>Quantity</b>: " + getStockQuantity() + "<br>";
 	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
